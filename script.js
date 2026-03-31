@@ -97,9 +97,9 @@ function crearAlumne() {
 
     if (notaFinal >= 5) {
         estat = "Aprovat";
-    } else 
+    } else {
         estat = "Suspès";
-}
+    }
 
     return {
         nom: nom,
@@ -107,9 +107,9 @@ function crearAlumne() {
         practiques: practiques,
         actitud: actitud,
         notaFinal: notaFinal,
-        estat: estat 
+        estat: estat
     };
-
+}
 // mostrar els alumnes
 
 function mostrarAlumnes() {
