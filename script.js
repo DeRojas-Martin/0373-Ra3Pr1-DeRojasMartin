@@ -82,3 +82,29 @@ function mostrarErrors(errors) {
 
     missatge.innerHTML = text;
 }
+
+// creacio dels alumnes i if de aprovat o suspes
+
+function crearAlumne() {
+    let nom = inputNom.value;
+    let examen = Number(inputExamen.value);
+    let practiques = Number(inputPractiques.value);
+    let actitud = Number(inputActitud.value);
+
+    let notaFinal = (examen * 0.6) + (practiques * 0.3) + (actitud * 0.1);
+
+    let estat;
+
+    if (notaFinal >= 5) {
+        estat = "Aprovat";
+    } else 
+        estat = "Suspès";
+}
+
+    return {
+        nom: nom,
+        examen: examen,
+        practiques: practiques,
+        actitud: actitud,
+        notaFinal: notaFinal,
+        estat: estat };
