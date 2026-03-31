@@ -107,7 +107,8 @@ function crearAlumne() {
         practiques: practiques,
         actitud: actitud,
         notaFinal: notaFinal,
-        estat: estat };
+        estat: estat 
+    };
 
 // mostrar els alumnes
 
@@ -118,3 +119,18 @@ function mostrarAlumnes() {
         cosTaula.innerHTML += "<tr><td>" + alumnes[i].nom + "</td><td>" + alumnes[i].notaFinal + "</td><td>" + alumnes[i].estat + "</td></tr>";
     }
 }
+
+// ordenacio de la llista d'alumnes de (+ a -) i de (- a +)
+botoAsc.addEventListener("click", function() {
+    alumnes.sort(function(a, b) {
+        return a.notaFinal - b.notaFinal;
+    });
+    mostrarAlumnes();
+});
+
+botoDesc.addEventListener("click", function() {
+    alumnes.sort(function(a, b) {
+        return b.notaFinal - a.notaFinal;
+    });
+    mostrarAlumnes();
+});
