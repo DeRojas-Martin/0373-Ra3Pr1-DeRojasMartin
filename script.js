@@ -108,3 +108,13 @@ function crearAlumne() {
         actitud: actitud,
         notaFinal: notaFinal,
         estat: estat };
+
+// mostrar els alumnes
+
+function mostrarAlumnes() {
+    cosTaula.innerHTML = "";
+
+    for (let i = 0; i < alumnes.length; i++) {
+        cosTaula.innerHTML += "<tr><td>" + alumnes[i].nom + "</td><td>" + alumnes[i].notaFinal + "</td><td>" + alumnes[i].estat + "</td></tr>";
+    }
+}
