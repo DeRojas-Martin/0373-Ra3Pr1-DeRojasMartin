@@ -117,7 +117,7 @@ function mostrarAlumnes() {
     cosTaula.innerHTML = "";
 
     for (let i = 0; i < alumnes.length; i++) {
-        cosTaula.innerHTML += "<tr><td>" + alumnes[i].nom + "</td><td>" + alumnes[i].notaFinal + "</td><td>" + alumnes[i].estat + "</td></tr>";
+        cosTaula.innerHTML += "<tr><td>" + alumnes[i].nom + "</td><td>" + alumnes[i].examen + "</td><td>" + alumnes[i].practiques + "</td><td>" + alumnes[i].actitud + "</td><td>" + alumnes[i].notaFinal.toFixed(2) + "</td><td>" + alumnes[i].estat + "</td></tr>";
     }
 }
 
