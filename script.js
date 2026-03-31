@@ -70,3 +70,15 @@ function validarFormulari() {
         errors: errors
     };
 }
+
+// mostrar errors del formulari
+
+function mostrarErrors(errors) {
+    let text = "";
+
+    for (let i = 0; i < errors.length; i++) {
+        text += errors[i] + "<br>";
+    }
+
+    missatge.innerHTML = text;
+}
