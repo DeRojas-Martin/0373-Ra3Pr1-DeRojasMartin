@@ -30,6 +30,7 @@ formulari.addEventListener("submit", function(event) {
         // amb push guardem el alumne / objecte creat en la array que hem fet amunt
         alumnes.push(alumne);
         mostrarAlumnes();
+        formulari.reset();
         missatge.innerHTML = "el Alumne s'ha afegit correctament";
         missatge.classList.remove("error");
         missatge.classList.add("correcte");
