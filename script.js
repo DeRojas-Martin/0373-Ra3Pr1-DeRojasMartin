@@ -13,6 +13,9 @@ let botoDesc = document.getElementById("ordenarDesc");
 // Array per els alumnes
 let alumnes = [];
 
+// event de submit
+
+
 // aquest event es per fer submint en la meva web
 formulari.addEventListener("submit", function(event) {
     // aquest function event es per a quan fem submit el navegador encomptas de fer refresh i es perd tot el que af es guardar les dades
@@ -34,3 +37,36 @@ formulari.addEventListener("submit", function(event) {
         mostrarErrors(valid.errors);
     }
 });
+
+
+// validacio del formulari, les notes tenen que estar dintre del rang
+
+function validarFormulari() {
+    let errors = [];
+
+    let nom = inputNom.value;
+    let examen = inputExamen.value;
+    let practiques = inputPractiques.value;
+    let actitud = inputActitud.value;
+
+    if (nom === "") {
+        errors.push("El nom no pot estar buit");
+    }
+
+    if (examen === "" || examen < 0 || examen > 10) {
+        errors.push("Examen incorrecte no esta dintre del rang (0-10)");
+    }
+
+    if (practiques === "" || practiques < 0 || practiques > 10) {
+        errors.push("Pràctiques incorrectes estan fora del rang (0-10)");
+    }
+
+    if (actitud === "" || actitud < 0 || actitud > 10) {
+        errors.push("Actitud incorrecta no esta dintre del rang(0-10)");
+    }
+
+    return {
+        correcte: errors.length === 0,
+        errors: errors
+    };
+}
